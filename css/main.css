@@ -15,13 +15,12 @@ h2{
   width: 33.3%;
 
 }
-.bt_ban li img{
+.bt_ban > li img{
   width:100%;
   transform: translateY(-70px);
 }
 
-
-
+/* 슬라이드 */
 
 #banner_slide{
   width: 100%;height: 500px;
@@ -35,3 +34,37 @@ h2{
   width: 300%;
   transition: .4s;
 }
+
+/* 시리즈 제품 */
+.series_wrap{
+  display: flex;
+  width: 100%;
+  height: 80%;
+}
+.series_wrap li{
+  overflow: hidden;
+  width: 50%;
+  height: 100%;
+  height: 80%;
+  border: solid 1px #333;
+}
+.series_wrap li img{
+  width: 100%;
+  height: 100%;
+  transform: translateY(-120px);
+  
+}
+.series_title{
+  width: 50%;
+  z-index: 999;
+  position: relative;
+  color: #fff;
+  font-weight: bold;
+  font-size: 300%;
+  text-shadow: 1px 1px 3px #ccc;
+  margin-left: 60px;
+  margin-top: 60px;
+}
+
+
+
