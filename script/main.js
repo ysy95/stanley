@@ -31,3 +31,35 @@ let Timer = setInterval(function(){
     mslide(0);
   }
 },4000);
+
+
+// 리뷰슬라이드
+// 1.변수
+const review_w = document.querySelector('#review_slide');
+const review = document.querySelector('.r_slide');
+const review_img = document.querySelectorAll('.r_slide li');
+
+const review_n = review_img.length;//목록개수
+const img2_w = 100;//이미지 한장 너비
+const review_view = 1;//보여줄 개수 
+const m2 = 0;
+
+let count2 = 0;
+// 2.너비구하기
+review.style.width = (img2_w+m2)*review_n - m2 +'%';
+
+
+// 3.함수작성
+function mslide2(n){
+  review.style.left = (img2_w+m2)* -n + '%';
+  count2 = n;
+}
+
+// 4.3초마다 움직이기
+let Timer2 = setInterval(function(){
+  if(count2 < review_n - review_view){
+    mslide2(count2+1);
+  }else{
+    mslide2(0);
+  }
+},4000);
